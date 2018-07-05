@@ -1,0 +1,162 @@
+body {
+  text-align: center;
+	background-color:#cccccc; 
+  }
+
+h1 {
+  font-family: Monoton;
+  font-size: 70px;
+  margin: 0.2em;
+}
+
+h2 {
+  margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+
+input[type="number"] {
+  width: 7em;
+  margin: 0 auto;
+}
+
+.pick-color{
+  margin: 0 auto;
+  font-size: 25px;
+  font-weight:bold;
+  text-align: center;
+}
+
+.pick-align{
+  text-align:left;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align:center;
+    /*height: 100vh;*/
+    background-color: #ea556f;
+	/*background-color: DodgerBlue;*/
+ }
+
+.box {
+    font-weight:bold;
+    width: 100%;
+	text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+	box-sizing: border-box;
+    border-bottom: 4px;
+    border-bottom-style: groove;
+    padding:10px 20px 10px 18px;
+	background-color:;
+	
+}
+	  
+.grid{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 4.23fr;
+  grid-column-gap: 3%;
+  box-shadow:0px 0px 5px 5px #C9C9C9;
+  -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+  -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+ }
+
+.one {
+  grid-column: 1 ;
+  grid-row: 1;
+  /*background-color: #ea556f;#ffffff;  change color as per page   size*/
+  box-shadow:0px 0px 5px 5px #C9C9C9;
+  -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+  -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+ }
+
+.two { 
+  grid-column: 2;
+  grid-row: 1;
+  background-color:white;
+  box-shadow:0px 0px 5px 5px #C9C9C9;
+  -webkit-box-shadow:2px 2px 5px 5x #C9C9C9;
+  -moz-box-shadow:2px 2px 5px 5px #C9C9C9;
+}	
+
+.button {
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight:bold;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px #999;
+ }
+
+.button:hover {background-color: #cccccc}
+
+.button:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input[type=number]{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#colorPicker{
+  padding: 10px 10px;
+  font-weight:bold;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px #999;
+}
+
+.hint{
+  padding:10px;
+  font-size:	20px;
+  font-weight:bold;
+  text-align:center;
+ }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .container {
+        width: 100%;
+    }
+}

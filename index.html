@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pixel Art Maker!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body background="assets/cover.jpg">
+<audio id="DrawArt">
+  <source src="assets/DrawArt.mp3" type="audio/mpeg">
+</audio>
+<audio id="DrawPixel">
+  <source src="assets/DrawPixel.mp3" type="audio/mpeg">
+</audio>
+<audio id="PickColor">
+  <source src="assets/PickColor.wav" type="audio/wav">
+</audio>
+<audio id="ClearPixel">
+  <source src="assets/ClearPixel.mp3" type="audio/mpeg">
+</audio>
+<audio id="ClearArt">
+  <source src="assets/ClearArt.mp3" type="audio/mpeg">
+</audio>
+
+	<div class="header-image">
+   <h1> Pixel Art Maker</h1>
+	</div>
+	
+	<div class="grid">
+	<div class="one">
+	 <div class="container">
+    <form id="sizePicker">
+		<div class="box">
+		Grid Height:
+       <input type="number" id="inputHeight" name="height" min="1" value="1">
+        </div>
+		<div class="box">
+		Grid Width: 
+		<input type="number" id="inputWidth" name="width" min="1" value="1">
+		</div>
+		<div class="box">
+		<input type="submit" onclick="playAudio('DrawArt')" value="Draw Pixel Art" class="button">
+		</div>
+		<div class="box">
+      <input type="reset" onclick="playAudio('ClearArt')" value="Clear Pixel Art" class="button">
+	  </div>
+    </form>
+	<div class="box">
+	 <div class="pick-color">Pick A Color</div>
+	
+    <input type="color" onclick="playAudio('PickColor')" id="colorPicker">
+	</div>
+	<div class="hint">
+	<p>Double click on pixel to clear color.</p>
+	</div>
+  </div>
+  </div>
+  <div class="two">
+    <h2>Design Canvas</h2>
+    <table id="pixelCanvas" onclick="playAudio('DrawPixel')" ondblclick="playAudio('ClearPixel')"></table>
+</div>
+</div>
+<script src="scripts/design.js"></script>
+</body>
+
+</html>
